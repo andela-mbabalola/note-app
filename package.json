@@ -1,0 +1,36 @@
+{
+  "name": "note-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-mbabalola/note-app.git"
+  },
+  "keywords": [
+    "Angularjs"
+  ],
+  "author": "Babalola Maryam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andela-mbabalola/note-app/issues"
+  },
+  "homepage": "https://github.com/andela-mbabalola/note-app#readme",
+  "dependencies": {
+    "browserify": "^13.0.0",
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-bower": "0.0.13",
+    "gulp-jade": "^1.1.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-less": "^3.0.5",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.9.1",
+    "path": "^0.12.7",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
