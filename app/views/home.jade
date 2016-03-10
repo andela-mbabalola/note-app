@@ -1,14 +1,14 @@
 div
-  form(method="post" name="addnote" ng-submit="addNote()")
+  form(method="post" name="addnote" ng-submit="notes.addNote()")
     md-input-container.md-block(flex-gt-sm)
       label Title
-      input(ng-model="note.title" type="text" name="title" required="true")
+      input(ng-model="notes.note.title" type="text" name="title" required="true")
     md-input-container.md-block(flex-gt-sm)
       label Content
-      textarea(ng-model="note.content" type="text" name="content" required="true")
+      textarea(ng-model="notes.note.content" type="text" name="content" required="true")
     button(type="submit" ng-disabled="addnote.$invalid") CREATE
 md-grid-list(md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-sm="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="8px" md-gutter-gt-sm="8px")
-  md-grid-tile(class="gray" md-colspan="1" md-rowspan="1" layout="column" ng-repeat="note in notes")
+  md-grid-tile(class="gray" md-colspan="1" md-rowspan="1" layout="column" ng-repeat="note in notes.notes")
     md-card.ripple-container(md-ink-ripple)
       .md-padding(flex)
         h3 {{note.title}}
@@ -17,4 +17,4 @@ md-grid-list(md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-sm="6" md-r
         md-button
           i.fa.fa-pencil(aria-label="edit" ui-sref="edit-note({id: note.id})")
         md-button
-          i.fa.fa-trash(aria-label="delete" ng-click="deleteNote($index, note)")
+          i.fa.fa-trash(aria-label="delete" ng-click="notes.deleteNote($index, note)")

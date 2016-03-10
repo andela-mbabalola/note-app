@@ -2,12 +2,17 @@
   'use strict';
 
   angular.module('note-app.controllers', []);
+  angular.module('note-app.services', []);
 
   //require controllers
   require('./controllers/note-ctrl');
 
+  //require services
+  require('./services/note');
+
   window.app = angular.module('note-app', [
     'note-app.controllers',
+    'note-app.services',
     'ngMaterial',
     'ui.router'
   ]);
@@ -28,12 +33,14 @@
         .state('home', {
           url: '/',
           controller: 'noteCtrl',
+          controllerAs: 'notes',
           templateUrl: 'views/home.html',
         })
 
         .state('edit-note', {
           url: '/note/{id}',
           controller: 'noteCtrl',
+          controllerAs: 'notes',
           templateUrl: 'views/note-modal.html',
         });
 

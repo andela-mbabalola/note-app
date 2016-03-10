@@ -1,8 +1,8 @@
-form(method="post" name="editnote" ng-submit="editANote()" ng-init="getNote()")
+form(method="post" name="editnote" ng-submit="notes.editANote()" ng-init="notes.getNote()")
   md-input-container.md-block(flex-gt-sm)
     label Title
-    input(ng-model="editNote.title" type="text" name="title" required="true")
+    input(ng-model="notes.editNote.title" type="text" name="title" required="true")
   md-input-container.md-block(flex-gt-sm)
     label Content
-    textarea(ng-model="editNote.content" type="text" name="content" required="true")
+    textarea(ng-model="notes.editNote.content" type="text" name="content" required="true")
   button(type="submit" ng-disabled="editnote.$invalid") UPDATE
